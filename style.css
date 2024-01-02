@@ -54,6 +54,7 @@ button {
     border-radius: 20px 20px 0px 0px;
     box-shadow: 0 0 20px rgba(0, 0, 0, .1);
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .media-player.minimized {
