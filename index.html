@@ -8,21 +8,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body onscroll="scroll()">
         <button class="toggle-player-btn" onclick="togglePlayer()">Click me!</button>
         <div id="player" class="wrapper">
-            <div class="media-player">
+            <div id="media-player" class="media-player">
                 <div class="media-toggle">
                     <button class="media-toggle-btn-selected">Piano</button>
                     <button class="media-toggle-btn">Starting Notes</button>
                 </div>
-                <button id="media-btn" onclick="play()" class="player-btn"><ion-icon name="play"></ion-icon></ion-icon></button>
+                <button id="media-btn" onclick="play()" class="player-btn"><ion-icon name="play"></ion-icon></button>
                 <div class="media-controls-container">
                     <div class="media-controls-time">1:39</div>
                     <div class="media-controls-seek-container">
                         
                         <div class="media-controls-seek-bar-bg">
-                            <button class="media-controls-seek-btn"></button>
+                            <button class="media-controls-seek-btn "></button>
                             <div class="media-controls-seek-bar-fg"></div>
                         </div>
                     </div>

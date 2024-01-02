@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
+
+
 body {
     padding: 0;
     margin: 0;
-    height: 100vh;
+    height: 10000px;
     justify-content: center;
     background-color: #ebebeb;
+    background-image: url("image.png");
+    background-size: contain;
     font-family: 'Lato', sans-serif;
 }
 
@@ -27,27 +31,37 @@ button {
 }
 
 #player {
-    position: absolute;
+    position: fixed;
     bottom: -300px;
     width: 100vw;
     transition: .3s;
+    
 }
 
 #player.active {
     bottom: 0px;
 }
 
+
 .media-player {
+    background-color: rgba(255, 255, 255, 0.9);
     overflow: hidden;
     padding: 30px;
     display: flex;
     gap: 20px;
     align-items: center;
     flex-direction: column;
-    background-color: #ffff;
     border-radius: 20px 20px 0px 0px;
     box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    backdrop-filter: blur(8px);
 }
+
+.media-player.minimized {
+    flex-direction: row-reverse;
+    
+}
+
+
 
 .media-toggle {
     padding: 1px;
@@ -55,10 +69,14 @@ button {
     border-radius: 20px;
 }
 
+.minimized .media-toggle {
+    display: none;
+}
+
 .media-toggle-btn, .media-toggle-btn-selected {
     padding: 10px 15px;
-    font-size: 12px;
-    font-weight: 800;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .media-toggle-btn-selected {
@@ -71,6 +89,25 @@ button {
     padding: 0;
     margin: 0;
     font-size: 4.6rem;
+}
+
+.minimized ion-icon {
+    font-size: 3rem;
+}
+
+
+.player-btn {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.player-btn:focus {
+    outline: none !important;
 }
 
 .media-controls-container {
